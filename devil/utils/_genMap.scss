@@ -1,0 +1,18 @@
+@mixin genMap($value) {
+  @each $property, $map in $value {
+    $prefix: map-get($map, "prefix");
+    $values: map-get($map, "values");
+
+    @each $key, $val in $values {
+      @if($key == 0) {
+        .#{$prefix} {
+          #{$property}: $val;
+        }
+      } @else {
+        .#{$prefix}-#{$key} {
+          #{$property}: $val;
+        }
+      }
+    }
+  }
+}

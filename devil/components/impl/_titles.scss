@@ -1,0 +1,23 @@
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: mix(black, map-get($colors, "main"), 25);
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: mix(black, map-get($colors, "main"), 15);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: mix(black, map-get($colors, "main"), 5);
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: map-get($colors, "main");
+}

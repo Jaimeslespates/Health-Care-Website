@@ -1,0 +1,121 @@
+@import "impl/3D-Text";
+
+@each $key, $val in $colors {
+
+  .text-#{$key} {
+    color: $val;
+  }
+
+  .text-hover-#{$key} {
+    &:hover {
+      color: $val;
+    }
+  }
+
+  .bg-#{$key} {
+    background-color: $val;
+  }
+
+  // Lighter
+
+  @for $i from 1 through 6 {
+
+    .text-#{$key}-light-#{$i} {
+      color: mix(white, $val, $i * 10);
+    }
+
+    .text-hover-#{$key}-light-#{$i} {
+      &:hover {
+        color: mix(white, $val, $i * 10);
+      }
+    }
+
+    .bg-#{$key}-light-#{$i} {
+      background-color: mix(white, $val, $i * 10);
+    }
+
+    @for $i2 from 1 through 8 {
+
+      .text-3D-#{$key}-dark-#{$i}-#{$i2} {
+        text-shadow: text3D(mix(white, $val, $i * 10), $i2);
+      }
+
+      .text-3D-#{$key}-dark-#{$i}-#{$i2}-shadow {
+        text-shadow: text3D_shadow(mix(white, $val, $i * 10), $i2);
+      }
+
+      @for $i3 from 1 through 4 {
+
+        .text-3D-#{$key}-dark-#{$i}-#{$i2}-shadow-#{$i3} {
+          text-shadow: text3D_shadow_spread(mix(white, $val, $i * 10), $i2, $i3);
+        }
+
+      }
+
+    }
+
+  }
+
+  // Darker
+
+  @for $i from 1 through 6 {
+
+    .text-#{$key}-dark-#{$i} {
+      color: mix(black, $val, $i * 10);
+    }
+
+    .text-hover-#{$key}-dark-#{$i} {
+      &:hover {
+        color: mix(black, $val, $i * 10);
+      }
+    }
+
+    .bg-#{$key}-dark-#{$i} {
+      background-color: mix(black, $val, $i * 10);
+    }
+
+    @for $i2 from 1 through 8 {
+
+      .text-3D-#{$key}-dark-#{$i}-#{$i2} {
+        text-shadow: text3D(mix(black, $val, $i * 10), $i2);
+      }
+
+      .text-3D-#{$key}-dark-#{$i}-#{$i2}-shadow {
+        text-shadow: text3D_shadow(mix(black, $val, $i * 10), $i2);
+      }
+
+      @for $i3 from 1 through 4 {
+
+        .text-3D-#{$key}-dark-#{$i}-#{$i2}-shadow-#{$i3} {
+          text-shadow: text3D_shadow_spread(mix(black, $val, $i * 10), $i2, $i3);
+        }
+
+      }
+
+    }
+
+  }
+
+  // 3D Text
+
+  @for $i from 1 through 8 {
+
+    .text-3D-#{$key}-#{$i} {
+      text-shadow: text3D($val, $i);
+    }
+
+    .text-3D-#{$key}-#{$i}-shadow {
+      text-shadow: text3D_shadow($val, $i);
+    }
+
+    @for $i2 from 1 through 4 {
+
+      .text-3D-#{$key}-#{$i}-shadow-#{$i2} {
+        text-shadow: text3D_shadow_spread($val, $i, $i2);
+      }
+
+    }
+
+  }
+
+}

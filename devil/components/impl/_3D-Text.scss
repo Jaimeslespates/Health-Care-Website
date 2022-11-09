@@ -1,0 +1,38 @@
+@use "sass:list";
+
+@function text3D($color, $repeat) {
+  $list: ();
+
+  @for $i from 1 through $repeat {
+    $list: list.append($list, 1px $i+px $color, comma);
+  }
+
+  @return $list;
+
+}
+
+@function text3D_shadow($color, $repeat) {
+  $list: ();
+
+  @for $i from 1 through $repeat {
+    $list: list.append($list, 1px $i+px $color, comma);
+  }
+
+  $list: list.append($list, 1px calc(#{$repeat}px + 1px) black);
+
+  @return $list;
+
+}
+
+@function text3D_shadow_spread($color, $repeat, $spreadAmount) {
+  $list: ();
+
+  @for $i from 1 through $repeat {
+    $list: list.append($list, 1px $i+px $color, comma);
+  }
+
+  $list: list.append($list, 1px calc(#{$repeat}px + 1px) $spreadAmount+px black);
+
+  @return $list;
+
+}
