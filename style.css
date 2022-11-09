@@ -16,6 +16,8 @@
 @import url("http://fonts.cdnfonts.com/css/montserrat");
 @import url("https://fonts.cdnfonts.com/css/nunito-sans");
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
+@import url("https://fonts.cdnfonts.com/css/oswald-4");
+@import url("https://fonts.cdnfonts.com/css/source-sans-pro");
 .fs-0 {
   font-size: calc(1rem + 0rem);
 }
@@ -20112,7 +20114,7 @@ h4 {
 body {
   scroll-behavior: smooth;
   display: grid;
-  grid-template: 6vh 100vh 50vh 20vh 5vh/100%;
+  grid-template: 6vh 120vh 50vh 20vh 5vh/100%;
 }
 @media (min-width: 1024px) {
   body {
@@ -20120,9 +20122,80 @@ body {
   }
 }
 
+/*
+  Header
+ */
+header {
+  display: grid;
+  grid-template: 100%/1fr 2fr 1fr;
+  align-items: center;
+  background: linear-gradient(169.46deg, #FFFFFF 21.52%, #B5B3B3 86.86%);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.72);
+  z-index: 99;
+}
+header img {
+  max-width: 100px;
+}
+@media (min-width: 1024px) {
+  header img {
+    max-width: 125px;
+  }
+}
+header nav {
+  display: flex;
+  justify-content: center;
+}
+header nav ul {
+  display: none;
+}
+@media (min-width: 1024px) {
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3vw;
+  }
+}
+header nav ul li a, header nav ul li a:visited {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #5EFCE8 0%, #736EFE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-filter: drop-shadow(0px 1px #1728C1) drop-shadow(0px 2px #1728C1) drop-shadow(1px 3px 3px #000000);
+  filter: drop-shadow(0px 1px #1728C1) drop-shadow(0px 2px #1728C1) drop-shadow(1px 3px 1px #000000);
+  transition: all 0.2s ease-in-out;
+}
+header nav ul li a:hover {
+  font-size: 1.35rem;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(153, 103, 186) 41.2%, rgb(0, 113, 227) 90%);
+}
+header .mr-1 {
+  display: inline;
+  justify-self: flex-end;
+}
+@media (min-width: 1024px) {
+  header .mr-1 {
+    display: none;
+  }
+}
+
+/*
+  Main Content
+ */
 #main-content {
   display: flex;
   flex-direction: column;
+  /*
+    Banner with Text box
+   */
+  /*
+    Section Missions
+   */
 }
 @media (min-width: 1024px) {
   #main-content {
@@ -20130,7 +20203,12 @@ body {
   }
 }
 #main-content #banner {
-  height: 50%;
+  height: 40%;
+  z-index: 2;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 @media (min-width: 1024px) {
   #main-content #banner {
@@ -20138,13 +20216,139 @@ body {
     width: 50%;
   }
 }
+#main-content #banner img {
+  height: 100%;
+  width: 200%;
+}
+@media (min-width: 1024px) {
+  #main-content #banner img {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  #main-content #banner img {
+    width: 150%;
+  }
+}
+#main-content #banner .text-box {
+  width: 200px;
+  position: absolute;
+  margin-bottom: 5%;
+  background: linear-gradient(176.46deg, rgba(0, 0, 0, 0.2451) -18.75%, rgba(0, 0, 0, 0.57) 97.24%);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  border: 2px solid;
+  border-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%) 1;
+  font-size: 14px;
+  padding: 1%;
+  /*
+    Responsive
+   */
+}
+#main-content #banner .text-box h1, #main-content #banner .text-box p {
+  text-align: center;
+  color: white;
+}
+#main-content #banner .text-box h1 {
+  font-size: 2em;
+  font-family: "Chakra Petch", sans-serif;
+  text-shadow: 0px 1px 0px #D8D5D5, 0px 2px 0px #D8D5D5, 1px 3px 2px black;
+}
+#main-content #banner .text-box p {
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-shadow: 1px 1px 1px black;
+}
+@media (min-width: 1024px) {
+  #main-content #banner .text-box {
+    width: 400px;
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) {
+  #main-content #banner .text-box {
+    width: 300px;
+    font-size: 18px;
+  }
+}
 #main-content #missions {
-  height: 50%;
+  z-index: 1;
+  height: 60%;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  display: grid;
+  align-items: center;
+  grid-template: 0.5fr repeat(4, 1fr)/100%;
 }
 @media (min-width: 1024px) {
   #main-content #missions {
     height: 100%;
     width: 50%;
+  }
+}
+#main-content #missions .left {
+  justify-self: flex-end;
+}
+#main-content #missions .right {
+  justify-self: flex-start;
+}
+#main-content #missions h1 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  filter: drop-shadow(0px 1px 0px #1663AA) drop-shadow(0px 2px 0px #1663AA) drop-shadow(1px 3px 3px #000000);
+}
+@media (min-width: 1024px) {
+  #main-content #missions h1 {
+    font-size: 3rem;
+    margin-left: 2%;
+  }
+}
+#main-content #missions .mission {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  max-width: 75%;
+  font-size: 14px;
+  /*
+    Responsive
+   */
+}
+#main-content #missions .mission .mission-text {
+  max-width: 75%;
+}
+#main-content #missions .mission img {
+  max-width: 45px;
+  height: 45px;
+}
+#main-content #missions .mission h1 {
+  background: linear-gradient(135deg, #5EFCE8 0%, #736EFE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.71));
+  font-size: 1.8em;
+  font-family: "Oswald", sans-serif;
+}
+#main-content #missions .mission p {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  color: black;
+}
+@media (min-width: 1024px) {
+  #main-content #missions .mission {
+    font-size: 18px;
+  }
+  #main-content #missions .mission img {
+    max-width: 75px;
+    height: 75px;
   }
 }
 

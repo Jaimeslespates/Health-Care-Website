@@ -7,21 +7,74 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Health Care</title>
         <link rel="stylesheet" href="style.css" type="text/css">
+        <!-- Feather Icon -->
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     </head>
 
     <body>
 
         <header>
 
+            <img class="ml" src="assets/images/logo.png" alt="Logo du site">
+
+            <nav>
+                <ul>
+                    <li><a href="#">Acceuil</a></li>
+                    <li><a href="#">Missions</a></li>
+                    <li><a href="#">Faire un don</a></li>
+                    <li><a href="#">Supporter</a></li>
+                </ul>
+            </nav>
+
+            <i class="mr-1 icon" data-feather="menu"></i>
+
         </header>
 
         <main id="main-content">
 
             <section id="banner">
-
+                <img src="assets/images/banner/banner1.jpg" alt="Bannière d'un médecin offrant des soins">
+                <div class="text-box">
+                    <h1>Health Care</h1>
+                    <p>Protect people and give health around the world</p>
+                </div>
             </section>
 
             <aside id="missions">
+
+                <h1 class="ml">Nos missions</h1>
+
+                <div class="mission left">
+                    <img src="assets/images/icon/icon1.png">
+                    <div class="mission-text">
+                        <h1 class="mission-title">Agir dans le monde</h1>
+                        <p class="mission-details">Notre but est d’être déployer dans le maximum de pays possible</p>
+                    </div>
+                </div>
+
+                <div class="mission right">
+                    <div class="mission-text">
+                        <h1 class="mission-title">Médecin qualifié</h1>
+                        <p class="mission-details">Nous avons une équipe de médecins compétentes et formés par nos soins</p>
+                    </div>
+                    <img src="assets/images/icon/icon2.png">
+                </div>
+
+                <div class="mission left">
+                    <img src="assets/images/icon/icon3.png">
+                    <div class="mission-text">
+                        <h1 class="mission-title">Equipement au top</h1>
+                        <p class="mission-details">Nous essayons d’avoir accès au meilleurs équipements médicales possible</p>
+                    </div>
+                </div>
+
+                <div class="mission right">
+                    <div class="mission-text">
+                        <h1 class="mission-title">Service gratuit</h1>
+                        <p class="mission-details">Nous voulons que toute la population puisse avoir accès facilement à des soins</p>
+                    </div>
+                    <img src="assets/images/icon/icon4.png">
+                </div>
 
             </aside>
 
@@ -38,6 +91,10 @@
         <footer>
 
         </footer>
+
+        <script>
+            feather.replace();
+        </script>
 
     </body>
 
