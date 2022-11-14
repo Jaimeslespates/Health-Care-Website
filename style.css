@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
     Health Care - CSS Main page
     _Jaimeslespates
@@ -20114,11 +20115,11 @@ h4 {
 body {
   scroll-behavior: smooth;
   display: grid;
-  grid-template: 6vh 120vh 50vh 20vh 5vh/100%;
+  grid-template: 6vh 120vh 80vh 40vh 3vh/100%;
 }
 @media (min-width: 1024px) {
   body {
-    grid-template: 6vh 65vh 50vh 25vh 5vh/100%;
+    grid-template: 6vh 65vh 65vh 50vh 4vh/100%;
   }
 }
 
@@ -20205,7 +20206,7 @@ header .mr-1 {
 #main-content #banner {
   height: 40%;
   z-index: 2;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.45);
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -20274,11 +20275,17 @@ header .mr-1 {
 }
 #main-content #missions {
   z-index: 1;
+  box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.45);
   height: 60%;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   display: grid;
   align-items: center;
   grid-template: 0.5fr repeat(4, 1fr)/100%;
+}
+@media (min-width: 1024px) {
+  #main-content #missions {
+    z-index: 2;
+  }
 }
 @media (min-width: 1024px) {
   #main-content #missions {
@@ -20350,6 +20357,237 @@ header .mr-1 {
     max-width: 75px;
     height: 75px;
   }
+}
+
+/*
+  Section Informations
+ */
+#informations {
+  z-index: 2;
+  background: linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
+  box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.45);
+  display: grid;
+  grid-template: 80% 20%/100%;
+  font-size: 15px;
+}
+@media (min-width: 1024px) {
+  #informations {
+    z-index: 1;
+  }
+}
+@media (min-width: 1024px) {
+  #informations {
+    font-size: 22px;
+  }
+}
+#informations h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 2em;
+  text-shadow: 0px 1px 0px #D1D1D1, 0px 2px 0px #D1D1D1, 1px 3px 4px #000000;
+}
+#informations p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  color: white;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.65);
+  max-width: 80%;
+}
+#informations h1, #informations p {
+  text-align: center;
+}
+#informations .infos {
+  display: grid;
+  grid-template: 50% 50%/100%;
+  grid-template-areas: "text1" "text2";
+}
+@media (min-width: 1024px) {
+  #informations .infos {
+    grid-template: 50% 50%/70% 30%;
+    grid-template-areas: "text1 image" "text2 image";
+  }
+}
+#informations .infos .info-box1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 5%;
+  grid-area: text1;
+}
+#informations .infos .info-box2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 5%;
+  grid-area: text2;
+}
+#informations .infos .images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#informations .infos .images img {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #informations .infos .images img {
+    display: block;
+  }
+}
+#informations .infos .images #image1 {
+  max-width: 300px;
+  border: 1px solid #FFFFFF;
+  filter: drop-shadow(5px 7px 7px rgba(0, 0, 0, 0.56));
+}
+#informations .infos .images #image2 {
+  max-width: 200px;
+  filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.25));
+}
+#informations .buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  gap: 1rem;
+}
+@media (min-width: 1024px) {
+  #informations .buttons {
+    align-items: center;
+  }
+}
+#informations .buttons .btn-main {
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Chakra Petch", sans-serif;
+  gap: 5px;
+  text-shadow: 0 1px 2px #000000;
+  transition: background-image 1s ease-in-out;
+}
+#informations .buttons .btn-main:hover {
+  background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+}
+#informations .buttons .btn-main .icon {
+  width: 25px;
+}
+@media (min-width: 1024px) {
+  #informations .buttons .btn-main .icon {
+    width: 44px;
+  }
+}
+
+/*
+  Section Données
+ */
+#data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#data .data-box {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+@media (min-width: 1024px) {
+  #data .data-box {
+    gap: 10%;
+  }
+}
+#data .data-box h1, #data .data-box h2 {
+  font-weight: 400;
+  color: black;
+}
+#data .data-box h1 {
+  font-size: 0.9rem;
+}
+@media (min-width: 1024px) {
+  #data .data-box h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+#data .data-box h2 {
+  font-size: 0.8rem;
+}
+@media (min-width: 1024px) {
+  #data .data-box h2 {
+    font-size: 1.5rem;
+  }
+}
+#data .data-box .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+#data .data-box .box .image {
+  height: 80%;
+}
+#data .data-box .box h1, #data .data-box .box h2 {
+  height: 20%;
+}
+#data .data-box img {
+  max-width: 80px;
+}
+@media (min-width: 1024px) {
+  #data .data-box img {
+    max-width: 160px;
+  }
+}
+
+/*
+    Footer
+   */
+footer {
+  display: flex;
+  background: linear-gradient(135deg, #C2FFD8 0%, #465EFB 100%);
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: white;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.81);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-button {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+::-webkit-scrollbar-track {
+  background: #939292;
+}
+
+::-webkit-scrollbar-corner {
+  background: #999;
+}
+
+::-webkit-resizer {
+  background: #111;
 }
 
 /*# sourceMappingURL=style.css.map */
