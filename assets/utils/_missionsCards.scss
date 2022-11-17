@@ -1,0 +1,39 @@
+.card {
+  display: flex;
+  flex-flow: row wrap;
+  padding: $base-padding;
+  border: $base-border-thickness solid #ddd;
+  box-shadow: $base-box-shadow;
+
+  .card-main {
+    display: flex;
+    text-align: center;
+    padding-bottom: 0.75rem;
+
+    img {
+      max-width: 125px;
+      max-height: 100px;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .card-date {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 2px;
+    }
+
+  }
+
+  .card-body {
+    text-align: center;
+    font-size: 12px;
+    a {
+      text-decoration: underline;
+    }
+  }
+
+}

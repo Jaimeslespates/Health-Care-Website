@@ -1,0 +1,29 @@
+@use 'sass:list';
+
+@mixin gradientText {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@function gradientText_shadow($shadows, $color) {
+  $list: drop-shadow(0px 1px $color );
+  @if($shadows > 1) {
+    @for $i from 2 through $shadows {
+      $list: list.append($list, drop-shadow(0px #{$i}px $color))
+    }
+  }
+  @return $list;
+}
+
+@function gradientText_shadow2($shadows, $color, $blur) {
+  $list: drop-shadow(0px 1px $color);
+  @if($shadows > 1) {
+    @for $i from 2 through $shadows {
+      $list: list.append($list, drop-shadow(0px #{$i}px $color))
+    }
+  }
+  $list: list.append($list, drop-shadow(0px #{$shadows + 1}px #{$blur}px black));
+  @return $list;
+}

@@ -1,0 +1,87 @@
+/*
+    Health Care - CSS Missions Page
+    _Jaimeslespates
+ */
+
+// Devil CSS (Dev 0.3)
+@import "../../devil/base";
+
+// Breakpoints Mixin
+@import "../../devil/utils/breakpoints";
+
+// Custom Cards
+@import "../../assets/utils/missionsCards";
+
+/*
+    Fonts
+ */
+
+// Montserrat
+@import url('http://fonts.cdnfonts.com/css/montserrat');
+
+
+/*
+    Main
+ */
+
+body {
+  display: grid;
+  grid-template: 5vh 100vh 3vh / 100%;
+}
+
+/*
+    Header
+ */
+@import "../../assets/utils/header";
+
+/*
+    Missions Container
+ */
+
+@import "../../devil/components/impl/_gradientText.scss";
+
+main {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../assets/images/banner/banner3.jpg");
+
+  .missions {
+    display: flex;
+    width: 90%;
+    height: 95%;
+    background: white;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    h1 {
+      font-family: "Montserrat", sans-serif;
+      color: #4eb6ff;
+      text-shadow:
+        0px 1px #24538d,
+        0px 2px #24538d,
+        0px 3px #24538d,
+        0px 4px #24538d,
+        0px 5px 3px black;
+      padding: 3%;
+    }
+
+    .card {
+      width: 95%;
+    }
+
+  }
+
+}
+
+/*
+    Footer
+ */
+@import "../../assets/utils/footer";
+
+/*
+    Scrollbar
+ */
+@import "../../assets/utils/scrollbar";
