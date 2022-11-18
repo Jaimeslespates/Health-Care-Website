@@ -20110,21 +20110,39 @@ h4 {
 }
 .card .card-main {
   display: flex;
-  text-align: center;
   padding-bottom: 0.75rem;
+  align-items: center;
 }
 .card .card-main img {
-  max-width: 125px;
-  max-height: 100px;
+  width: 125px;
+  height: 70px;
 }
-.card .card-main .card-title {
+@media (min-width: 768px) {
+  .card .card-main .card-main-text {
+    max-width: 500px;
+  }
+}
+.card .card-main .card-main-text .card-title {
   font-size: 14px;
   font-weight: bold;
+  text-align: center;
 }
-.card .card-main .card-date {
+@media (min-width: 768px) {
+  .card .card-main .card-main-text .card-title {
+    padding: 0 0.75rem;
+  }
+}
+.card .card-main .card-main-text .card-date {
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 2px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .card .card-main .card-main-text .card-date {
+    padding: 0.75rem;
+    text-align: start;
+  }
 }
 .card .card-body {
   text-align: center;
@@ -20142,7 +20160,12 @@ h4 {
  */
 body {
   display: grid;
-  grid-template: 5vh 100vh 3vh/100%;
+  grid-template: 6vh 150vh 3vh/100%;
+}
+@media (min-width: 768px) {
+  body {
+    grid-template: 6vh 100vh 3vh/100%;
+  }
 }
 
 /*
@@ -20224,6 +20247,17 @@ main .missions {
   align-items: center;
   flex-direction: column;
   gap: 10px;
+}
+main .missions .missions-container {
+  display: grid;
+  grid-template: repeat(3, 1fr)/100%;
+  justify-items: center;
+  gap: 10px;
+}
+@media (min-width: 1024px) {
+  main .missions .missions-container {
+    grid-template: repeat(1, 1fr)/repeat(2, 1fr);
+  }
 }
 main .missions h1 {
   font-family: "Montserrat", sans-serif;

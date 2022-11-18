@@ -26,7 +26,10 @@
 
 body {
   display: grid;
-  grid-template: 5vh 100vh 3vh / 100%;
+  grid-template: 6vh 150vh 3vh / 100%;
+  @include tablet {
+    grid-template: 6vh 100vh 3vh / 100%;
+  }
 }
 
 /*
@@ -46,6 +49,7 @@ main {
   justify-content: center;
   align-items: center;
   background: url("../../assets/images/banner/banner3.jpg");
+  $mission-count: 3;
 
   .missions {
     display: flex;
@@ -55,6 +59,16 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 10px;
+
+    .missions-container {
+      display: grid;
+      grid-template: repeat($mission-count, 1fr) / 100%;
+      justify-items: center;
+      gap: 10px;
+      @include desktop {
+        grid-template: repeat($mission-count % 2, 1fr) / repeat(2, 1fr);
+      }
+    }
 
     h1 {
       font-family: "Montserrat", sans-serif;

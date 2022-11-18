@@ -7,23 +7,39 @@
 
   .card-main {
     display: flex;
-    text-align: center;
     padding-bottom: 0.75rem;
+    align-items: center;
 
     img {
-      max-width: 125px;
-      max-height: 100px;
+      width: 125px;
+      height: 70px;
     }
 
-    .card-title {
-      font-size: 14px;
-      font-weight: bold;
-    }
+    .card-main-text {
 
-    .card-date {
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 2px;
+      @include tablet {
+        max-width: 500px;
+      }
+
+      .card-title {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        @include tablet {
+          padding: 0 $base-padding;
+        }
+      }
+
+      .card-date {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 2px;
+        text-align: center;
+        @include tablet {
+          padding: $base-padding;
+          text-align: start;
+        }
+      }
     }
 
   }
