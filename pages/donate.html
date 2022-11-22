@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Health Care | Faire un don</title>
+        <link rel="stylesheet" href="styles/donate.css" type="text/css">
+        <!-- Feather Icon -->
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <img class="ml" src="../assets/images/logo.png" alt="Logo du site">
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Acceuil</a></li>
+                    <li><a href="missions.html">Missions</a></li>
+                    <li><a href="#">Faire un don</a></li>
+                    <li><a href="#">Supporter</a></li>
+                </ul>
+            </nav>
+
+            <i class="mr-1 icon" data-feather="menu"></i>
+        </header>
+
+        <main>
+
+            <div class="bg-image"></div>
+
+            <div class="form">
+
+                <div class="form-main">
+
+                    <div class="form-title">
+                        <h1>Faire un don</h1>
+                    </div>
+
+                    <div class="form-description">
+                        <p>Vous souhaitez contribuer à la santé dans le monde ?
+                            Vous pouvez dès maintenant faire un don pour nous aider</p>
+                    </div>
+
+                </div>
+
+                <form>
+
+                    <div class="form-item">
+                        <label for="lastName">Nom</label>
+                        <input type="text" id="lastName" name="user_lastName">
+                    </div>
+
+                    <div class="form-item">
+                        <label for="firstName">Prénom</label>
+                        <input type="text" id="firstName" name="user_firstName">
+                    </div>
+
+                    <div class="form-item">
+                        <label for="mail">E-mail</label>
+                        <input type="email" id="mail" name="user_mail">
+                    </div>
+
+                    <div class="form-item">
+                        <label for="amount">Montant</label>
+                        <input type="number" id="amount" name="user_donate" min="5" max="10000">
+                    </div>
+
+                    <button class="btn-main">Faire le don</button>
+
+                </form>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <p>Copyright 2022 © Health Care</p>
+        </footer>
+
+        <script>feather.replace();</script>
+
+    </body>
+</html>

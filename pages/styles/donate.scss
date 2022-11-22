@@ -1,0 +1,83 @@
+/*
+    Health Care - CSS Missions Page
+    _Jaimeslespates
+ */
+
+// Devil CSS (Dev 0.3)
+@import "../../devil/base";
+
+// Breakpoints Mixin
+@import "../../devil/utils/breakpoints";
+
+
+/*
+    Main
+ */
+body {
+  scroll-behavior: smooth;
+  display: grid;
+  grid-template: 6vh 100vh 5vh / 100%;
+  @include tablet {
+    grid-template: 6vh 100vh 3vh / 100%;
+  }
+}
+
+
+
+/*
+    Header
+ */
+@import "../../assets/utils/header";
+
+
+
+/*
+    Main Content
+ */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .bg-image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: url("../../assets/images/banner/background1.jpg") no-repeat;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+    filter: blur(5px);
+  }
+
+  .form {
+    z-index: 2;
+    background: white;
+
+    .form-main .form-description {
+      max-width: 300px;
+
+      @include desktop {
+        max-width: 500px;
+      }
+
+      p {
+        font-size: 12px;
+
+        @include desktop {
+          font-size: 14px;
+        }
+
+      }
+
+    }
+  }
+
+}
+
+
+/*
+    Footer
+   */
+
+@import "../../assets/utils/footer";

@@ -1,6 +1,5 @@
-@charset "UTF-8";
 /*
-    Health Care - CSS Main page
+    Health Care - CSS Missions Page
     _Jaimeslespates
  */
 /*
@@ -14,11 +13,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 @import url("http://fonts.cdnfonts.com/css/lemonmilk");
 @import url("http://fonts.cdnfonts.com/css/kruda");
-@import url("http://fonts.cdnfonts.com/css/montserrat");
-@import url("https://fonts.cdnfonts.com/css/nunito-sans");
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
-@import url("https://fonts.cdnfonts.com/css/oswald-4");
-@import url("https://fonts.cdnfonts.com/css/source-sans-pro");
 .fs-0 {
   font-size: calc(1rem + 0rem);
 }
@@ -20211,24 +20205,21 @@ h4 {
 }
 
 /*
-    Fonts
- */
-/*
     Main
  */
 body {
   scroll-behavior: smooth;
   display: grid;
-  grid-template: 6vh 120vh 80vh 40vh 3vh/100%;
+  grid-template: 6vh 100vh 5vh/100%;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   body {
-    grid-template: 6vh 65vh 65vh 50vh 4vh/100%;
+    grid-template: 6vh 100vh 3vh/100%;
   }
 }
 
 /*
-  Header
+    Header
  */
 header {
   display: grid;
@@ -20290,363 +20281,41 @@ header .mr-1 {
 }
 
 /*
-  Main Content
+    Main Content
  */
-#main-content {
-  display: flex;
-  flex-direction: column;
-  /*
-    Banner with Text box
-   */
-  /*
-    Section Missions
-   */
-}
-@media (min-width: 1024px) {
-  #main-content {
-    flex-direction: row;
-  }
-}
-#main-content #banner {
-  height: 40%;
-  z-index: 2;
-  box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.45);
+main {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
-@media (min-width: 1024px) {
-  #main-content #banner {
-    height: 100%;
-    width: 50%;
-  }
-}
-#main-content #banner img {
+main .bg-image {
+  position: relative;
   height: 100%;
-  width: 200%;
-}
-@media (min-width: 1024px) {
-  #main-content #banner img {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) {
-  #main-content #banner img {
-    width: 150%;
-  }
-}
-#main-content #banner .text-box {
-  width: 200px;
-  position: absolute;
-  margin-bottom: 5%;
-  background: linear-gradient(176.46deg, rgba(0, 0, 0, 0.2451) -18.75%, rgba(0, 0, 0, 0.57) 97.24%);
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
-  box-sizing: border-box;
-  border: 2px solid;
-  border-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%) 1;
-  font-size: 14px;
-  padding: 1%;
-  /*
-    Responsive
-   */
-}
-#main-content #banner .text-box h1, #main-content #banner .text-box p {
-  text-align: center;
-  color: white;
-}
-#main-content #banner .text-box h1 {
-  font-size: 2em;
-  font-family: "Chakra Petch", sans-serif;
-  text-shadow: 0px 1px 0px #D8D5D5, 0px 2px 0px #D8D5D5, 1px 3px 2px black;
-}
-#main-content #banner .text-box p {
-  font-size: 1em;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  text-shadow: 1px 1px 1px black;
-}
-@media (min-width: 1024px) {
-  #main-content #banner .text-box {
-    width: 400px;
-    font-size: 24px;
-  }
-}
-@media (min-width: 768px) {
-  #main-content #banner .text-box {
-    width: 300px;
-    font-size: 18px;
-  }
-}
-#main-content #missions {
-  z-index: 1;
-  box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.45);
-  height: 60%;
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-  display: grid;
-  align-items: center;
-  grid-template: 0.5fr repeat(4, 1fr)/100%;
-}
-@media (min-width: 1024px) {
-  #main-content #missions {
-    z-index: 2;
-  }
-}
-@media (min-width: 1024px) {
-  #main-content #missions {
-    height: 100%;
-    width: 50%;
-  }
-}
-#main-content #missions .left {
-  justify-self: flex-end;
-}
-#main-content #missions .right {
-  justify-self: flex-start;
-}
-#main-content #missions h1 {
-  font-size: 2rem;
-  background: linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  filter: drop-shadow(0px 1px 0px #1663AA) drop-shadow(0px 2px 0px #1663AA) drop-shadow(1px 3px 3px #000000);
-}
-@media (min-width: 1024px) {
-  #main-content #missions h1 {
-    font-size: 3rem;
-    margin-left: 2%;
-  }
-}
-#main-content #missions .mission {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
+  width: 100%;
+  background: url("../../assets/images/banner/background1.jpg") no-repeat;
+  width: 100%;
   height: 100%;
-  max-width: 75%;
-  font-size: 14px;
-  /*
-    Responsive
-   */
+  -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+  filter: blur(5px);
 }
-#main-content #missions .mission .mission-text {
-  max-width: 75%;
-}
-#main-content #missions .mission img {
-  max-width: 45px;
-  height: 45px;
-}
-#main-content #missions .mission h1 {
-  background: linear-gradient(135deg, #5EFCE8 0%, #736EFE 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.71));
-  font-size: 1.8em;
-  font-family: "Oswald", sans-serif;
-}
-#main-content #missions .mission p {
-  font-family: "Oswald", sans-serif;
-  font-weight: 300;
-  color: black;
-}
-@media (min-width: 1024px) {
-  #main-content #missions .mission {
-    font-size: 18px;
-  }
-  #main-content #missions .mission img {
-    max-width: 75px;
-    height: 75px;
-  }
-}
-
-/*
-  Section Informations
- */
-#informations {
+main .form {
   z-index: 2;
-  background: linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
-  box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.45);
-  display: grid;
-  grid-template: 80% 20%/100%;
-  font-size: 15px;
+  background: white;
 }
-@media (min-width: 1024px) {
-  #informations {
-    z-index: 1;
-  }
-}
-@media (min-width: 1024px) {
-  #informations {
-    font-size: 22px;
-  }
-}
-#informations h1 {
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 700;
-  color: white;
-  font-size: 2em;
-  text-shadow: 0px 1px 0px #D1D1D1, 0px 2px 0px #D1D1D1, 1px 3px 4px #000000;
-}
-#informations p {
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 400;
-  color: white;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.65);
-  max-width: 80%;
-}
-#informations h1, #informations p {
-  text-align: center;
-}
-#informations .infos {
-  display: grid;
-  grid-template: 50% 50%/100%;
-  grid-template-areas: "text1" "text2";
-}
-@media (min-width: 1024px) {
-  #informations .infos {
-    grid-template: 50% 50%/70% 30%;
-    grid-template-areas: "text1 image" "text2 image";
-  }
-}
-#informations .infos .info-box1 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 5%;
-  grid-area: text1;
-}
-#informations .infos .info-box2 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 5%;
-  grid-area: text2;
-}
-#informations .infos .images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#informations .infos .images img {
-  display: none;
-}
-@media (min-width: 1024px) {
-  #informations .infos .images img {
-    display: block;
-  }
-}
-#informations .infos .images #image1 {
+main .form .form-main .form-description {
   max-width: 300px;
-  border: 1px solid #FFFFFF;
-  filter: drop-shadow(5px 7px 7px rgba(0, 0, 0, 0.56));
-}
-#informations .infos .images #image2 {
-  max-width: 200px;
-  filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.25));
-}
-#informations .buttons {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: start;
-  gap: 1rem;
 }
 @media (min-width: 1024px) {
-  #informations .buttons {
-    align-items: center;
+  main .form .form-main .form-description {
+    max-width: 500px;
   }
 }
-#informations .buttons .btn-main {
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  padding: 0.75rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: "Chakra Petch", sans-serif;
-  gap: 5px;
-  text-shadow: 0 1px 2px #000000;
-  transition: background-image 1s ease-in-out;
-}
-#informations .buttons .btn-main:hover {
-  background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
-}
-#informations .buttons .btn-main .icon {
-  width: 25px;
+main .form .form-main .form-description p {
+  font-size: 12px;
 }
 @media (min-width: 1024px) {
-  #informations .buttons .btn-main .icon {
-    width: 44px;
-  }
-}
-
-/*
-  Section Données
- */
-#data {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#data .data-box {
-  width: 90%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
-}
-@media (min-width: 1024px) {
-  #data .data-box {
-    gap: 10%;
-  }
-}
-#data .data-box h1, #data .data-box h2 {
-  font-weight: 400;
-  color: black;
-}
-#data .data-box h1 {
-  font-size: 0.9rem;
-}
-@media (min-width: 1024px) {
-  #data .data-box h1 {
-    font-size: 2rem;
-    font-weight: 600;
-  }
-}
-#data .data-box h2 {
-  font-size: 0.8rem;
-}
-@media (min-width: 1024px) {
-  #data .data-box h2 {
-    font-size: 1.5rem;
-  }
-}
-#data .data-box .box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
-}
-#data .data-box .box .image {
-  height: 80%;
-}
-#data .data-box .box h1, #data .data-box .box h2 {
-  height: 20%;
-}
-#data .data-box img {
-  max-width: 80px;
-}
-@media (min-width: 1024px) {
-  #data .data-box img {
-    max-width: 160px;
+  main .form .form-main .form-description p {
+    font-size: 14px;
   }
 }
 
@@ -20666,35 +20335,4 @@ footer p {
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.81);
 }
 
-/*
-    Scrollbar
- */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-button {
-  background: black;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #333;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #666;
-}
-
-::-webkit-scrollbar-track {
-  background: #939292;
-}
-
-::-webkit-scrollbar-corner {
-  background: #999;
-}
-
-::-webkit-resizer {
-  background: #111;
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=donate.css.map */
