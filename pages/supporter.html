@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Health Care | Programme Supporter</title>
+        <link rel="stylesheet" href="styles/supporter.css" type="text/css">
+        <!-- Feather Icon -->
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+
+            <img class="ml" src="../assets/images/logo.png" alt="Logo du site">
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Acceuil</a></li>
+                    <li><a href="missions.html">Missions</a></li>
+                    <li><a href="donate.html">Faire un don</a></li>
+                    <li><a href="#">Supporter</a></li>
+                </ul>
+            </nav>
+
+            <i class="mr-1 icon" data-feather="menu"></i>
+
+        </header>
+
+        <main>
+
+            <div class="bg-image"></div>
+
+            <div class="form">
+
+                <div class="form-main">
+
+                    <div class="form-title">
+                        <h1>Devenir supporter</h1>
+                    </div>
+
+                    <div class="form-description">
+                        <p>Vous souhaitez avoir un retour des personnes que vous avez aidé?
+                            Devenez supporter et ayez des nouvelles des gens que vous sauvez !</p>
+                    </div>
+
+                </div>
+
+                <form>
+
+                    <div class="form-item">
+                        <label for="lastName">Nom</label>
+                        <input type="text" id="lastName" name="user_lastName">
+                    </div>
+
+                    <div class="form-item">
+                        <label for="firstName">Prénom</label>
+                        <input type="text" id="firstName" name="user_firstName">
+                    </div>
+
+                    <div class="form-item">
+                        <label for="mail">E-mail</label>
+                        <input type="email" id="mail" name="user_mail">
+                    </div>
+
+                    <div class="form-item">
+                        <label for="address">Adresse</label>
+                        <input type="text" id="address" name="user_address">
+                    </div>
+
+                    <div class="form-msg">
+                        <label for="msg">Message</label>
+                        <textarea id="msg" placeholder="Vous pouvez écrire ce que vous voulez, votre message sera lu par les personnes que vous aidez."></textarea>
+                    </div>
+
+                    <button class="btn-main"><span class="buy">Payer</span><span class="price"> - 30€/mois</span></button>
+
+                </form>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <p>Copyright 2022 © Health Care</p>
+        </footer>
+
+        <script>feather.replace();</script>
+
+    </body>
+
+</html>

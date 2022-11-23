@@ -13,7 +13,7 @@
 
     <body>
 
-        <header>
+        <header class="">
 
             <img class="ml" src="assets/images/logo.png" alt="Logo du site">
 
@@ -22,18 +22,19 @@
                     <li><a href="#">Acceuil</a></li>
                     <li><a href="pages/missions.html">Missions</a></li>
                     <li><a href="pages/donate.html">Faire un don</a></li>
-                    <li><a href="#">Supporter</a></li>
+                    <li><a href="pages/supporter.html">Supporter</a></li>
                 </ul>
+                <i class="close" data-feather="x"></i>
             </nav>
 
-            <i class="mr-1 icon" data-feather="menu"></i>
+            <i class="mr-1 menu" data-feather="menu"></i>
 
         </header>
 
         <main id="main-content">
 
             <section id="banner">
-                <img src="assets/images/banner/banner1.jpg" alt="Bannière d'un médecin offrant des soins">
+                <div class="banner-img"></div>
                 <div class="text-box">
                     <h1>Health Care</h1>
                     <p>Protect people and give health around the world</p>
@@ -113,8 +114,14 @@
             </div>
 
             <div class="buttons">
-                <div class="button1 btn-main"><img class="icon" src="assets/images/icon/donate.png" alt="Icon de don"> Faire un don</div>
-                <div class="button2 btn-main"><img class="icon" src="assets/images/icon/supporter.png" alt="Icon de supporter">Devenir supporter</div>
+                <div class="button1 btn-main">
+                    <img class="icon" src="assets/images/icon/donate.png" alt="Icon de don">
+                    <a href="pages/donate.html" target="_blank">Faire un don</a>
+                </div>
+                <div class="button2 btn-main">
+                    <img class="icon" src="assets/images/icon/supporter.png" alt="Icon de supporter">
+                    <a href="pages/supporter.html" target="_blank">Devenir supporter</a>
+                </div>
             </div>
 
         </section>
@@ -154,6 +161,8 @@
         <footer>
             <p>Copyright 2022 © Health Care</p>
         </footer>
+
+        <script src="js/menu.js"></script>
 
         <script>
             feather.replace();

@@ -6,6 +6,10 @@
   padding: $base-padding $base-padding * 2;
   border-radius: $base-border-radius;
   background-color: $bg-color;
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 @each $key, $val in $colors {

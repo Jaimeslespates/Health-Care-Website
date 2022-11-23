@@ -1,0 +1,69 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .bg-image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: url("../../assets/images/banner/background1.jpg") no-repeat;
+    background-size: 300%;
+    @include desktop { background-size: 100%; }
+    -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+    filter: blur(5px);
+  }
+
+  .form {
+    z-index: 2;
+    background: white;
+
+    .form-main {
+      .form-title {
+
+        background-image: linear-gradient(90deg, rgb(47, 159, 220) 4%, rgba(30,29,29,1) 120%);
+        filter: gradientText_shadow2(1, #10588c,2);
+      }
+
+      .form-description {
+        max-width: 300px;
+
+        @include desktop {
+          max-width: 500px;
+        }
+
+        p {
+          font-size: 10px;
+
+          @include tablet { font-size: 14px; }
+
+        }
+
+      }
+    }
+
+    form {
+      .form-item, .form-msg {
+        label {
+          background-image: linear-gradient(90deg, rgb(59, 190, 238) 4%, rgba(30, 29, 29, 1) 120%);
+          filter: gradientText_shadow2(1, #10588c, 2);
+        }
+      }
+
+      button {
+        background-image: linear-gradient(90deg, rgb(59, 190, 238) 4%, rgba(30, 29, 29, 1) 120%);
+        &:hover {
+          background-image: linear-gradient(-90deg, rgb(59, 190, 238) 4%, rgba(30, 29, 29, 1) 120%);
+        }
+      }
+
+      textarea {
+        margin: $base-margin 0;
+        @include tablet { margin: 1rem 0; }
+        width: 200px;
+        @include tablet { width: 400px; }
+      }
+    }
+  }
+
+}

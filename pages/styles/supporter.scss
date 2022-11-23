@@ -1,0 +1,74 @@
+/*
+    Health Care - CSS Missions Page
+    _Jaimeslespates
+ */
+
+// Devil CSS (Dev 0.3)
+@import "../../devil/base";
+
+// Breakpoints Mixin
+@import "../../devil/utils/breakpoints";
+
+/*
+    Fonts
+ */
+
+
+// Montserrat
+@import url('http://fonts.cdnfonts.com/css/montserrat');
+
+
+/*
+    Main
+ */
+body {
+  scroll-behavior: smooth;
+  display: grid;
+  grid-template: 6vh 150vh 3vh / 100%;
+  @include tablet {
+    grid-template: 6vh 100vh 3vh / 100%;
+  }
+}
+
+
+/*
+    Header
+ */
+@import "../../assets/utils/header";
+
+
+/*
+    Main Content
+ */
+@import "../../assets/utils/form";
+
+main {
+
+  .bg-image {
+    background: url("../../assets/images/banner/background2.jpg") no-repeat;
+    @include tablet { background-size: 300%; }
+  }
+
+  form button {
+
+    .price {
+      font-size: 10px;
+      @include tablet { font-size: 14px; }
+      color: #D6D6D6;
+    }
+  }
+
+}
+
+/*
+    Footer
+ */
+@import "../../assets/utils/footer";
+footer {
+  z-index: 999;
+}
+
+/*
+    Scrollbar
+ */
+@import "../../assets/utils/scrollbar";

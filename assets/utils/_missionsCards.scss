@@ -24,21 +24,14 @@
       .card-title {
         font-size: 14px;
         font-weight: bold;
-        text-align: center;
-        @include tablet {
-          padding: 0 $base-padding;
-        }
+        padding: 0 $base-padding;
       }
 
       .card-date {
         font-size: 12px;
         font-weight: 500;
         line-height: 2px;
-        text-align: center;
-        @include tablet {
-          padding: $base-padding;
-          text-align: start;
-        }
+        padding: $base-padding $base-padding;
       }
     }
 
