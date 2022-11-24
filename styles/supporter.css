@@ -315,6 +315,34 @@ header .header-menu {
   }
 }
 
+.mobile-active nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 300vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  z-index: 99;
+}
+.mobile-active nav ul {
+  display: flex;
+  margin-top: 200px;
+  flex-direction: column;
+  gap: 5vh;
+  text-align: center;
+}
+.mobile-active nav .header-menu-close {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  color: white;
+  width: 40px;
+  right: 45px;
+  top: 20px;
+  filter: drop-shadow(0 2px 2px black);
+}
+
 /*
     Main Content
  */
