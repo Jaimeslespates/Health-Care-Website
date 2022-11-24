@@ -1,0 +1,456 @@
+/*
+    Health Care - CSS Missions Page
+    _Jaimeslespates
+ */
+/*
+
+            D E V I L
+
+        Made by _Jaimeslespates
+
+ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import url("http://fonts.cdnfonts.com/css/lemonmilk");
+@import url("http://fonts.cdnfonts.com/css/kruda");
+@import url("http://fonts.cdnfonts.com/css/montserrat");
+
+html, body, body div, span, h1, p, address, img, ul, li, form, label, footer, header, menu, nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+main, footer, header, nav {
+  display: block;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+input {
+  vertical-align: middle;
+}
+
+ input, textarea {
+  font: 99% sans-serif;
+}
+
+
+label,
+input[type=button],
+button {
+  cursor: pointer;
+}
+
+button, input, textarea {
+  margin: 0;
+}
+
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible;
+}
+
+html, body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.btn-main {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  background-color: #C81F19;
+}
+.btn-main a {
+  text-decoration: none;
+  color: white;
+}
+.btn-main:hover {
+  background-color: #961713;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #961713;
+}
+
+.p {
+  padding: 0.75rem;
+}
+
+.ml {
+  margin-left: 0.75rem;
+}
+
+.form {
+  position: absolute;
+  background: white;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+}
+@media (min-width: 768px) {
+  .form {
+    width: 600px;
+  }
+}
+@media (min-width: 1024px) {
+  .form {
+    width: 700px;
+  }
+}
+.form .form-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.75rem;
+}
+.form .form-main .form-title {
+  background-image: linear-gradient(90deg, rgb(222, 74, 74) 4%, rgb(30, 29, 29) 120%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  filter: drop-shadow(0px 1px #8C1013) drop-shadow(0px 2px 2px black);
+  margin-bottom: 5px;
+}
+.form .form-main .form-title h1, .form .form-main .form-title p {
+  font-size: 24px;
+}
+@media (min-width: 768px) {
+  .form .form-main .form-title h1, .form .form-main .form-title p {
+    font-size: 36px;
+  }
+}
+.form .form-main .form-description {
+  font-size: 10px;
+  font-weight: 500;
+  max-width: 400px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .form .form-main .form-description {
+    font-size: 14px;
+  }
+}
+.form form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0.75rem;
+}
+.form form .form-item, .form form .form-msg {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.form form .form-item label, .form form .form-msg label {
+  font-weight: 500;
+  color: white;
+  background-image: linear-gradient(89.8deg, rgb(196, 13, 13) 4.7%, rgb(30, 29, 29) 120.3%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  filter: drop-shadow(0px 1px #f85555) drop-shadow(0px 2px 1px black);
+  padding-bottom: 5px;
+}
+.form form .form-item input, .form form .form-msg input {
+  max-width: 500px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+.form form button {
+  margin: 0.75rem;
+  width: 200px;
+  font-family: "Poppins", sans-serif, sans-serif;
+  font-size: 18px;
+  background-image: linear-gradient(-90deg, rgb(222, 74, 74) 4%, rgb(30, 29, 29) 120%);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  color: white;
+  text-shadow: 0px 1px #C8C6C6, 0px 2px 2px black;
+  transition: background-image 0.2s ease-in-out;
+}
+.form form button:hover {
+  background-image: linear-gradient(0deg, rgb(222, 74, 74) 4%, rgb(30, 29, 29) 120%);
+}
+.form form textarea {
+  width: 200px;
+  height: 100px;
+  font-size: 12px;
+  resize: none;
+  margin: 0.75rem 0;
+}
+@media (min-width: 768px) {
+  .form form textarea {
+    width: 300px;
+    height: 150px;
+    font-size: 16px;
+  }
+}
+
+/*
+    Fonts
+ */
+/*
+    Main
+ */
+body {
+  scroll-behavior: smooth;
+  display: grid;
+  grid-template: 6vh 150vh 3vh/100%;
+}
+@media (min-width: 768px) {
+  body {
+    grid-template: 6vh 100vh 3vh/100%;
+  }
+}
+
+/*
+    Header
+ */
+header {
+  display: grid;
+  grid-template: 100%/1fr 2fr 1fr;
+  align-items: center;
+  background: linear-gradient(169.46deg, #FFFFFF 21.52%, #B5B3B3 86.86%);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.72);
+  z-index: 99;
+}
+header img {
+  max-width: 100px;
+}
+@media (min-width: 1024px) {
+  header img {
+    max-width: 125px;
+  }
+}
+header nav {
+  display: flex;
+  justify-content: center;
+}
+header nav .header-menu-close {
+  display: none;
+}
+header nav ul {
+  display: none;
+}
+@media (min-width: 1024px) {
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3vw;
+  }
+}
+header nav ul li a, header nav ul li a:visited {
+  z-index: 2;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #5EFCE8 0%, #736EFE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-filter: drop-shadow(0px 1px #1728C1) drop-shadow(0px 2px #1728C1) drop-shadow(1px 3px 3px #000000);
+  filter: drop-shadow(0px 1px #1728C1) drop-shadow(0px 2px #1728C1) drop-shadow(1px 3px 1px #000000);
+  transition: all 0.2s ease-in-out;
+}
+header nav ul li a:hover {
+  font-size: 1.35rem;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(153, 103, 186) 41.2%, rgb(0, 113, 227) 90%);
+}
+header .header-menu {
+  display: inline;
+  justify-self: flex-end;
+  cursor: pointer;
+  width: 40px;
+}
+@media (min-width: 1024px) {
+  header .header-menu {
+    display: none;
+  }
+}
+
+/*
+    Main Content
+ */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .bg-image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: url("../assets/images/banner/background1.jpg") no-repeat;
+  background-size: 300%;
+  -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+  filter: blur(5px);
+}
+@media (min-width: 1024px) {
+  main .bg-image {
+    background-size: 100%;
+  }
+}
+main .form {
+  z-index: 2;
+  background: white;
+}
+main .form .form-main .form-title {
+  background-image: linear-gradient(90deg, rgb(47, 159, 220) 4%, rgb(30, 29, 29) 120%);
+  filter: drop-shadow(0px 1px #10588c) drop-shadow(0px 2px 2px black);
+}
+main .form .form-main .form-description {
+  max-width: 300px;
+}
+@media (min-width: 1024px) {
+  main .form .form-main .form-description {
+    max-width: 500px;
+  }
+}
+main .form .form-main .form-description p {
+  font-size: 10px;
+}
+@media (min-width: 768px) {
+  main .form .form-main .form-description p {
+    font-size: 14px;
+  }
+}
+main .form form .form-item label, main .form form .form-msg label {
+  background-image: linear-gradient(90deg, rgb(59, 190, 238) 4%, rgb(30, 29, 29) 120%);
+  filter: drop-shadow(0px 1px #10588c) drop-shadow(0px 2px 2px black);
+}
+main .form form button {
+  background-image: linear-gradient(90deg, rgb(59, 190, 238) 4%, rgb(30, 29, 29) 120%);
+}
+main .form form button:hover {
+  background-image: linear-gradient(-90deg, rgb(59, 190, 238) 4%, rgb(30, 29, 29) 120%);
+}
+main .form form textarea {
+  margin: 0.75rem 0;
+  width: 200px;
+}
+@media (min-width: 768px) {
+  main .form form textarea {
+    margin: 1rem 0;
+  }
+}
+@media (min-width: 768px) {
+  main .form form textarea {
+    width: 400px;
+  }
+}
+
+main .bg-image {
+  background: url("../assets/images/banner/background2.jpg") no-repeat;
+}
+@media (min-width: 768px) {
+  main .bg-image {
+    background-size: 300%;
+  }
+}
+main form button .price {
+  font-size: 10px;
+  color: #D6D6D6;
+}
+@media (min-width: 768px) {
+  main form button .price {
+    font-size: 14px;
+  }
+}
+
+/*
+    Footer
+ */
+footer {
+  display: flex;
+  background: linear-gradient(135deg, #C2FFD8 0%, #465EFB 100%);
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: white;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.81);
+}
+
+footer {
+  z-index: 999;
+}
+
+/*
+    Scrollbar
+ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-button {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+::-webkit-scrollbar-track {
+  background: #939292;
+}
+
+::-webkit-scrollbar-corner {
+  background: #999;
+}
+
+::-webkit-resizer {
+  background: #111;
+}

@@ -1,0 +1,312 @@
+/*
+    Health Care - CSS Missions Page
+    _Jaimeslespates
+ */
+/*
+
+            D E V I L
+
+        Made by _Jaimeslespates
+
+ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import url("http://fonts.cdnfonts.com/css/lemonmilk");
+@import url("http://fonts.cdnfonts.com/css/kruda");
+@import url("http://fonts.cdnfonts.com/css/montserrat");
+
+html, body, body div, h1, p, img, ul, li, footer, header, menu, nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+main, footer, header, nav {
+  display: block;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html, body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.card {
+  display: block;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.4);
+}
+.card .card-title {
+  font-size: 16px;
+  padding-bottom: 0.75rem;
+  font-weight: bold;
+}
+.card .card-body {
+  font-size: 16px;
+}
+.card .card-body a {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #961713;
+}
+
+.p {
+  padding: 0.75rem;
+}
+
+.m {
+  margin: 0.75rem;
+}
+
+.ml {
+  margin-left: 0.75rem;
+}
+
+.card {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.4);
+}
+.card .card-main {
+  display: flex;
+  padding-bottom: 0.75rem;
+  align-items: center;
+}
+.card .card-main img {
+  width: 125px;
+  height: 70px;
+}
+@media (min-width: 768px) {
+  .card .card-main .card-main-text {
+    max-width: 500px;
+  }
+}
+.card .card-main .card-main-text .card-title {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 0.75rem;
+}
+.card .card-main .card-main-text .card-date {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2px;
+  padding: 0.75rem 0.75rem;
+}
+.card .card-body {
+  text-align: center;
+  font-size: 12px;
+}
+.card .card-body a {
+  text-decoration: underline;
+}
+
+/*
+    Fonts
+ */
+/*
+    Main
+ */
+body {
+  display: grid;
+  grid-template: 6vh 150vh 3vh/100%;
+}
+@media (min-width: 768px) {
+  body {
+    grid-template: 6vh 100vh 3vh/100%;
+  }
+}
+
+/*
+    Header
+ */
+header {
+  display: grid;
+  grid-template: 100%/1fr 2fr 1fr;
+  align-items: center;
+  background: linear-gradient(169.46deg, #FFFFFF 21.52%, #B5B3B3 86.86%);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.72);
+  z-index: 99;
+}
+header img {
+  max-width: 100px;
+}
+@media (min-width: 1024px) {
+  header img {
+    max-width: 125px;
+  }
+}
+header nav {
+  display: flex;
+  justify-content: center;
+}
+header nav .header-menu-close {
+  display: none;
+}
+header nav ul {
+  display: none;
+}
+@media (min-width: 1024px) {
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3vw;
+  }
+}
+header nav ul li a, header nav ul li a:visited {
+  z-index: 2;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #5EFCE8 0%, #736EFE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-filter: drop-shadow(0px 1px #1728C1) drop-shadow(0px 2px #1728C1) drop-shadow(1px 3px 3px #000000);
+  filter: drop-shadow(0px 1px #1728C1) drop-shadow(0px 2px #1728C1) drop-shadow(1px 3px 1px #000000);
+  transition: all 0.2s ease-in-out;
+}
+header nav ul li a:hover {
+  font-size: 1.35rem;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(153, 103, 186) 41.2%, rgb(0, 113, 227) 90%);
+}
+header .header-menu {
+  display: inline;
+  justify-self: flex-end;
+  cursor: pointer;
+  width: 40px;
+}
+@media (min-width: 1024px) {
+  header .header-menu {
+    display: none;
+  }
+}
+
+/*
+    Missions Container
+ */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../assets/images/banner/banner3.jpg");
+}
+main .missions {
+  display: flex;
+  width: 90%;
+  height: 95%;
+  background: white;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+main .missions .missions-container {
+  display: grid;
+  grid-template: repeat(3, 1fr)/100%;
+  justify-items: center;
+  gap: 10px;
+}
+@media (min-width: 1024px) {
+  main .missions .missions-container {
+    grid-template: repeat(1, 1fr)/repeat(2, 1fr);
+  }
+}
+main .missions h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #4eb6ff;
+  text-shadow: 0px 1px #24538d, 0px 2px #24538d, 0px 3px #24538d, 0px 4px #24538d, 0px 5px 3px black;
+  padding: 3%;
+}
+main .missions .card {
+  width: 95%;
+}
+
+/*
+    Footer
+ */
+footer {
+  display: flex;
+  background: linear-gradient(135deg, #C2FFD8 0%, #465EFB 100%);
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: white;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.81);
+}
+
+/*
+    Scrollbar
+ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-button {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+::-webkit-scrollbar-track {
+  background: #939292;
+}
+
+::-webkit-scrollbar-corner {
+  background: #999;
+}
+
+::-webkit-resizer {
+  background: #111;
+}
