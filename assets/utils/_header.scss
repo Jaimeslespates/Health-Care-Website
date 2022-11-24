@@ -4,6 +4,7 @@ header {
   align-items: center;
   background: linear-gradient(169.46deg, #FFFFFF 21.52%, #B5B3B3 86.86%);
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.72);
+  z-index: 99;
 
 
   img {
@@ -17,7 +18,7 @@ header {
     display: flex;
     justify-content: center;
 
-    .close {
+    .header-menu-close {
       display: none;
     }
 
@@ -61,9 +62,11 @@ header {
     }
   }
 
-  .mr-1 {
+  .header-menu {
     display: inline;
     justify-self: flex-end;
+    cursor: pointer;
+    width: 40px;
     @include lg {
       display: none;
     }
@@ -84,21 +87,26 @@ header {
     z-index: 99;
 
     ul {
+      display: flex;
       margin-top: 200px;
       flex-direction: column;
       gap: 5vh;
       text-align: center;
     }
 
-    .close {
+    .header-menu-close {
       display: block;
+      cursor: pointer;
       position: absolute;
       color: white;
-      width: 30px;
-      height: 30px;
+      width: 40px;
       right: 45px;
       top: 20px;
       filter: drop-shadow(0 2px 2px black);
+    }
+
+    .header-menu {
+      order: 3;
     }
   }
 }
